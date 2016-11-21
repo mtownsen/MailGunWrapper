@@ -20,9 +20,14 @@ Or install it yourself as:
 
     $ gem install mailgun_wrapper
 
-## Usage
+## Usage Example
 
-TODO: Write usage instructions here
+### Send Message
+@mailgun = MailgunWrapper::MailGun.new(ENV['MAILGUN_API_KEY'], @domain)
+@mailgun.send_message('Test Subject', 'Test Body', '12345', 'matthewtownsen@gmail.com')
+
+### List Previous Sent Emails
+@mailgun.list_emails('matthewtownsen@gmail.com')
 
 ## Development
 
