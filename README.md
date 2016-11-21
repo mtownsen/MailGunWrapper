@@ -21,11 +21,17 @@ Or install it yourself as:
 ## Usage Example
 
 ### Send Message
+
+```ruby
 @mailgun = MailgunWrapper::MailGun.new(ENV['MAILGUN_API_KEY'], @domain)
 @mailgun.send_message('Test Subject', 'Test Body', '12345', 'matthewtownsen@gmail.com')
+```
 
 ### List Previous Sent Emails
+
+```ruby
 @mailgun.list_emails('matthewtownsen@gmail.com')
+```
 
 ## Development
 
